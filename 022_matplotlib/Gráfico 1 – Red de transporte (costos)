@@ -1,0 +1,8 @@
+# Red de transporte - Costos
+pos = nx.spring_layout(G, seed=42)
+plt.figure(figsize=(7,5))
+nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=1200, font_size=12, edge_color='gray')
+labels = nx.get_edge_attributes(G, 'weight')
+nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+plt.title("Red de Transporte - Costos entre Nodos")
+plt.show()
